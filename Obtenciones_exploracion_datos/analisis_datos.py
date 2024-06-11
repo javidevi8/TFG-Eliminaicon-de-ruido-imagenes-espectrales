@@ -9,14 +9,14 @@ from scipy.fft import fft2, fftshift
 
 ruta_imagen = "Datos_prueba/dimension0_079.png"
 
-# Carga la imagen
+
 imagen = cv2.imread(ruta_imagen,cv2.IMREAD_GRAYSCALE)
 print(imagen.shape)
 
-# Carga la imagen
+
 imagen2 = Image.open(ruta_imagen)
 
-# Convierte la imagen a escala de grises
+# Convertimos la imagen a escala de grises
 imagen_gris = imagen2.convert('L')
 
 imagen_array = np.array(imagen_gris)
@@ -24,7 +24,6 @@ imagen_array = np.array(imagen_gris)
 ############################## Calcula el histograma #########################################
 histograma = np.histogram(imagen_array, bins=256, range=(0, 256))[0]
 
-# Muestra el histograma
 plt.figure()
 plt.title("Histograma de la imagen")
 plt.xlabel("Valor de píxel")
@@ -34,7 +33,7 @@ plt.xlim([0, 256])
 plt.yscale('log')
 plt.show()
 
-# Calcula la media y la desviación estándar
+# Calculamos la media y la desviación estándar
 media = np.mean(imagen)
 desviacion_estandar = np.std(imagen)
 
@@ -51,16 +50,16 @@ plt.show()
 # Tamaño de la imagen
 N = 256
 
-# Generar señal de ruido gaussiano
+# Generamos señal de ruido gaussiano
 media_gauss = 0
 desv_est_gauss = 10
 ruido_gaussiano = np.random.normal(media_gauss, desv_est_gauss, size=(573, 846))
 
-# Generar señal de ruido de Poisson
+# Generamos señal de ruido de Poisson
 lambda_poisson = 10
 ruido_poisson = np.random.poisson(lambda_poisson, size=(573, 846))
 
-# Calcular la transformada de Fourier de cada ruido
+# Calculamos la transformada de Fourier de cada ruido
 fft_ruido_gaussiano = fft2(ruido_gaussiano)
 fft_ruido_poisson = fft2(ruido_poisson)
 
@@ -99,13 +98,12 @@ plt.show()
 
 ###################Comparacion de distribuciones.########################
 
-# Obtener las intensidades de los píxeles
+# Obtenemos las intensidades de los píxeles
 pixel_intensities = imagen.flatten()
 
-# Definir las distribuciones candidatas
+#Distribuciones candidatas
 distributions = [stats.norm, stats.rayleigh, stats.gamma]
 
-# Ajustar las distribuciones y calcular la bondad del ajuste (usando la prueba de Kolmogorov-Smirnov)
 fit_params = []
 
 for distribution in distributions:
@@ -117,7 +115,7 @@ for distribution in distributions:
     sample_size = int(len(pixel_intensities))
     
 
-# Graficar de los histogramas de todas las distribuciones ajustadas
+# Mostramos histogramas de todas las distribuciones ajustadas
 
 for i, distribution in enumerate(distributions):
     fit_data = distribution.rvs(size=sample_size, *fit_params[i])
