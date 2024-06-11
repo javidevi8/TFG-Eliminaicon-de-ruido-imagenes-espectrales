@@ -29,3 +29,10 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 1. Clona el repositorio:
    ```sh
    git clone https://github.com/javidevi8/TFG-Eliminaicon-de-ruido-imagenes-espectrales.git
+
+## Modelos
+### Noise2Void
+Noise2Void es un enfoque que permite entrenar modelos de denoising sin la necesidad de imágenes limpias como referencia. Utiliza una estrategia de máscara para predecir los valores de los píxeles basándose en el contexto de sus alrededores.
+
+### DnCNN
+DnCNN (Denoising Convolutional Neural Network) es una red neuronal convolucional diseñada específicamente para la eliminación de ruido en imágenes. Requiere un conjunto de datos de entrenamiento con imágenes limpias y sus correspondientes versiones ruidosas.
