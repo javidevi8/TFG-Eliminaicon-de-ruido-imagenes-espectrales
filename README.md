@@ -28,10 +28,21 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
    ```sh
    git clone https://github.com/javidevi8/TFG-Eliminaicon-de-ruido-imagenes-espectrales.git
 
+
+## USO
+1. Creamos carpeta de Datos con las imagenes espectrales, dentro del directorio en el que se encuentre el modelo que queremos utilizar.
+2. Ajustar el modelo a los datos que se tiene.
+3. En caso de ser N2V usqar archivo de prediction_Noise2Void para comprobar resultados
+
 ## Modelos
 ### Noise2Void
 Noise2Void es un enfoque que permite entrenar modelos de denoising sin la necesidad de imágenes limpias como referencia. Utiliza una estrategia de máscara para predecir los valores de los píxeles basándose en el contexto de sus alrededores.
+
 Paper: https://arxiv.org/abs/1811.10980
 
 ### DnCNN
 DnCNN (Denoising Convolutional Neural Network) es una red neuronal convolucional diseñada específicamente para la eliminación de ruido en imágenes. Requiere un conjunto de datos de entrenamiento con imágenes limpias y sus correspondientes versiones ruidosas.
+Paper: https://arxiv.org/abs/1608.03981
+
+## Credenciales
+Modelo del Noise2Void basado en la interpretacion del paper y de la implementacion del siguiente github: https://github.com/juglab/n2v
