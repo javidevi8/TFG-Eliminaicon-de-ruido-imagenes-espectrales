@@ -11,8 +11,6 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Modelos](#modelos)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 - [Créditos](#créditos)
 
 ## Instalación
@@ -20,7 +18,7 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 ### Requisitos Previos
 
 - Python 3.8+
-- [TensorFlow](https://www.tensorflow.org/install) 2.0+
+- [TensorFlow](https://www.tensorflow.org/install) 2.0+ ⚠️ N2v no compatible con Tensoflow 2.16 ⚠️
 - [NumPy](https://numpy.org/install/)
 - [Matplotlib](https://matplotlib.org/stable/users/installing.html)
 
@@ -33,6 +31,7 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 ## Modelos
 ### Noise2Void
 Noise2Void es un enfoque que permite entrenar modelos de denoising sin la necesidad de imágenes limpias como referencia. Utiliza una estrategia de máscara para predecir los valores de los píxeles basándose en el contexto de sus alrededores.
+Paper: https://arxiv.org/abs/1811.10980
 
 ### DnCNN
 DnCNN (Denoising Convolutional Neural Network) es una red neuronal convolucional diseñada específicamente para la eliminación de ruido en imágenes. Requiere un conjunto de datos de entrenamiento con imágenes limpias y sus correspondientes versiones ruidosas.
