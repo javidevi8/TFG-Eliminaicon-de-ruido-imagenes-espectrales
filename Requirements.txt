@@ -1,0 +1,15 @@
+n2v
+numpy
+csbdeep
+matplotlib
+os
+tensorboard
+glob
+skimage
+random
+datetime
+cv2
+PIL
+scipy
+silx
+h5py
