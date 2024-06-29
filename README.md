@@ -18,9 +18,12 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 ### Requisitos Previos
 
 - Python 3.8+
+- n2v
 - [TensorFlow](https://www.tensorflow.org/install) 2.0+ ⚠️ N2v no compatible con Tensoflow 2.16 ⚠️
 - [NumPy](https://numpy.org/install/)
 - [Matplotlib](https://matplotlib.org/stable/users/installing.html)
+
+Se encuentran en más detalle en el Requirements.txt
 
 ### Instrucciones
 
@@ -32,7 +35,7 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 ## USO
 1. Creamos carpeta de Datos con las imagenes espectrales, dentro del directorio en el que se encuentre el modelo que queremos utilizar.
 2. Ajustar el modelo a los datos que se tiene.
-3. En caso de ser N2V usqar archivo de prediction_Noise2Void para comprobar resultados
+3. En caso de ser N2V usar archivo de prediction_Noise2Void para comprobar resultados
 
 ## Modelos
 ### Noise2Void
