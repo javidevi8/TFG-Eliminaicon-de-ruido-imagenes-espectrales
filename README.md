@@ -36,7 +36,7 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 
 ## Modelos
 ### Noise2Void
-Noise2Void es un enfoque que permite entrenar modelos de denoising sin la necesidad de imágenes limpias como referencia. Utiliza una estrategia de máscara para predecir los valores de los píxeles basándose en el contexto de sus alrededores.
+Noise2Void es un enfoque que permite entrenar modelos de denoising sin la necesidad de imágenes limpias como referencia. Utiliza una estrategia de máscara para predecir los valores de los píxeles basándose en el contexto de sus alrededores. En el repositorio encontramos los archivos con los que entrenamos y predecimos, a su vez de una carpeta con el código con las funciones de las que se hace uso en los archivos de entrenamiento y predicción. Para poder utilizar el tensorboard hay que hacer las modificaciones que se encuentran en el archivo n2v_standard.py apartir de la línea 253
 
 Paper: https://arxiv.org/abs/1811.10980
 
