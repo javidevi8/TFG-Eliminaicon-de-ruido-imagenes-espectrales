@@ -11,7 +11,7 @@ El proyecto se centra en la eliminación de ruido en imágenes espectrales obten
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Modelos](#modelos)
-- [Créditos](#créditos)
+- [Créditos](#credenciales)
 
 ## Instalación
 
